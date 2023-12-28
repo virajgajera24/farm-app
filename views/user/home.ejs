@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h2>welcome <%= username%></h2>
+    <br><button style="background-color: yellowgreen;"><a href="user_buylist" style="color: lightgreen; font-weight: bold; text-decoration: none;">your buylist</a></button>
+    <br><button style="background-color: yellowgreen;"><a href="/orderlist" style="color: lightgreen; font-weight: bold; text-decoration: none;">your orderlist</a></button>
+<table>
+    <% result.forEach(function(user){ %>
+    <tr>
+        <td ><img src="<%= user.image%>" width="300" alt=""></td>
+        <td><%= user.name%></td>
+        <td>price <%= user.price%></td>
+        <td ><button style="color: white; text-decoration: none;"><a  href="/buy/<%= user.id%>">buy</a></button></td>
+    </tr>
+    <% }); %>
+</table>
+</body>
+</html>

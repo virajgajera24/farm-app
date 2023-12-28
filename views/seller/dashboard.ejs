@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>welcome <%= sellername%></h3>
+    <table width="80%">
+        <tr>
+            <td align="center"><a href="add_product">add product</a></td>
+            <td align="center"><a href="manage_order">manage order</a></td>
+        </tr>
+    </table>
+   <table border="">
+    <% result.forEach(function(user){ %>
+        <tr>
+            <td ><img src="<%= user.image%>" width="100" alt=""></td>
+            <td><%= user.name%></td>
+            <td><%= user.price%></td>
+            <td><a href="product_edit/<%= user.id%>">edit</a></td>
+            <td><a href="delete/<%= user.id%>">delete</a></td>
+        </tr>
+        <% }); %>
+   </table>
+</body>
+</html>

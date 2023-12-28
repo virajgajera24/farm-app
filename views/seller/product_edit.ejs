@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <form action="" method="post">
+            <% result.forEach(function(user){ %>
+            <tr>
+                <td>product name</td>
+                <td><input type="text" name="name" value="<%= user.name%>"></td>
+            </tr>
+            <tr>
+                <td>product image link</td>
+                <td><input type="text" name="image" value="<%= user.image%>"></td>
+                <td><img src="<%= user.image%>" width="100"></td>
+            </tr>
+            <tr>
+                <td>product price</td>
+                <td><input type="tel" name="price" value="<%= user.price%>"></td>
+            </tr>
+            <tr>
+                <td><button type="submit">save</button></td>
+            </tr>
+            <% }); %>
+        </form>
+    </table>
+</body>
+</html>

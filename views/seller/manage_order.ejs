@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="" method="post">
+    <table>
+        <% result.forEach(function(user){ %>
+            <tr>
+                <td ><img src="<%= user.image%>" width="100" alt=""></td>
+                <td><%= user.name%></td>
+                <td><%= user.price%></td>
+                <td><button ><a href="manage_order/approve/<%= user.id%>">approve</a></button></td>
+                <td><button><a href="manage_order/decline/<%= user.id%>">decline</a></button></td>
+                
+            </tr>
+            <% }); %>
+    </table>
+   </form>
+</body>
+</html>
+
+
